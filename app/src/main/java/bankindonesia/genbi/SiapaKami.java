@@ -23,6 +23,7 @@ public class SiapaKami extends AppCompatActivity {
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout mDrawerLayout;
     private String mActivityTitle;
+    private Intent intentDrawer;
 
     private LinearLayout lineGenBaruIndo;
     private LinearLayout lineSambutanGubBI;
@@ -49,10 +50,17 @@ public class SiapaKami extends AppCompatActivity {
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0){
-                    Intent i = new Intent(SiapaKami.this, Beranda.class);
-                    startActivity(i);
-                }
+            switch (position){
+                case 0:
+                    intentDrawer = new Intent(SiapaKami.this, Beranda.class);
+                    break;
+                case 7:
+                    intentDrawer = new Intent(SiapaKami.this, Login.class);
+                    break;
+                default:
+                    break;
+            }
+            startActivity(intentDrawer);
             }
         });
 

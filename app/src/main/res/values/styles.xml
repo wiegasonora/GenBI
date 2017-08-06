@@ -5,7 +5,23 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#E46F3C</item>
         <item name="colorPrimaryDark">#EB4C06</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">#a7823e</item>
+    </style>
+    <style name="TextDef">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+    <style name="TextButton">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="TextTitle">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>

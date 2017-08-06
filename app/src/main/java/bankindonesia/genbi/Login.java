@@ -12,9 +12,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
-public class Beranda extends AppCompatActivity  {
+public class Login extends AppCompatActivity {
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -25,8 +24,10 @@ public class Beranda extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_beranda);
+        setContentView(R.layout.activity_login);
 
+
+        //INITIATE DRAWER
         mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
         mActivityTitle = getTitle().toString();
 
@@ -34,20 +35,23 @@ public class Beranda extends AppCompatActivity  {
 
         setupDrawer();
 
+        //ALL CUSTOMIZATION CODE MUST BE PLACES BELOW
+
+
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (position){
-                    case 1:
-                        intentDrawer = new Intent(Beranda.this, SiapaKami.class);
-                        break;
-                    case 7:
-                        intentDrawer = new Intent(Beranda.this, Login.class);
-                        break;
-                    default:
-                        break;
-                }
-                startActivity(intentDrawer);
+            switch (position){
+                case 0:
+                    intentDrawer = new Intent(Login.this, Beranda.class);
+                    break;
+                case 1:
+                    intentDrawer = new Intent(Login.this, SiapaKami.class);
+                    break;
+                default:
+                    break;
+            }
+            startActivity(intentDrawer);
             }
         });
 
