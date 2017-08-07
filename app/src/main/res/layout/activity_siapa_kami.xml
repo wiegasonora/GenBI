@@ -18,7 +18,16 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/text_title_siapakami"
+                    android:paddingLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Siapa Kami"
+                    style="@style/TextTitle"/>
                 <LinearLayout
+                    android:layout_below="@id/text_title_siapakami"
                     android:id="@+id/line_generasibaruindonesia"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"

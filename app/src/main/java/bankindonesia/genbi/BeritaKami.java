@@ -13,7 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class Login extends AppCompatActivity {
+public class BeritaKami extends AppCompatActivity {
     private ListView mDrawerList;
     private ArrayAdapter<String> mAdapter;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -24,10 +24,8 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_berita_kami);
 
-
-        //INITIATE DRAWER
         mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
         mActivityTitle = getTitle().toString();
 
@@ -35,41 +33,38 @@ public class Login extends AppCompatActivity {
 
         setupDrawer();
 
-        //ALL CUSTOMIZATION CODE MUST BE PLACES BELOW
-
-
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            switch (position){
-                case 0:
-                    intentDrawer = new Intent(Login.this, Beranda.class);
-                    break;
-                case 1:
-                    intentDrawer = new Intent(Login.this, SiapaKami.class);
-                    break;
-                case 2:
-                    intentDrawer = new Intent(Login.this, AktivitasKami.class);
-                    break;
-                case 3:
-                    intentDrawer = new Intent(Login.this, BeritaKami.class);
-                    break;
-                case 4:
-                    intentDrawer = new Intent(Login.this, Galeri.class);
-                    break;
-                case 5:
-                    intentDrawer = new Intent(Login.this, Komentar.class);
-                    break;
-                case 6:
-                    intentDrawer = new Intent(Login.this, Beasiswa.class);
-                    break;
-                case 7:
-                    intentDrawer = new Intent(Login.this, Login.class);
-                    break;
-                default:
-                    break;
-            }
-            startActivity(intentDrawer);
+                switch (position){
+                    case 0:
+                        intentDrawer = new Intent(BeritaKami.this, Beranda.class);
+                        break;
+                    case 1:
+                        intentDrawer = new Intent(BeritaKami.this, SiapaKami.class);
+                        break;
+                    case 2:
+                        intentDrawer = new Intent(BeritaKami.this, AktivitasKami.class);
+                        break;
+                    case 3:
+                        intentDrawer = new Intent(BeritaKami.this, BeritaKami.class);
+                        break;
+                    case 4:
+                        intentDrawer = new Intent(BeritaKami.this, Galeri.class);
+                        break;
+                    case 5:
+                        intentDrawer = new Intent(BeritaKami.this, Komentar.class);
+                        break;
+                    case 6:
+                        intentDrawer = new Intent(BeritaKami.this, Beasiswa.class);
+                        break;
+                    case 7:
+                        intentDrawer = new Intent(BeritaKami.this, Login.class);
+                        break;
+                    default:
+                        break;
+                }
+                startActivity(intentDrawer);
             }
         });
 

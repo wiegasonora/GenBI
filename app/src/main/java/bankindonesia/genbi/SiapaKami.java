@@ -54,6 +54,24 @@ public class SiapaKami extends AppCompatActivity {
                 case 0:
                     intentDrawer = new Intent(SiapaKami.this, Beranda.class);
                     break;
+                case 1:
+                    intentDrawer = new Intent(SiapaKami.this, SiapaKami.class);
+                    break;
+                case 2:
+                    intentDrawer = new Intent(SiapaKami.this, AktivitasKami.class);
+                    break;
+                case 3:
+                    intentDrawer = new Intent(SiapaKami.this, BeritaKami.class);
+                    break;
+                case 4:
+                    intentDrawer = new Intent(SiapaKami.this, Galeri.class);
+                    break;
+                case 5:
+                    intentDrawer = new Intent(SiapaKami.this, Komentar.class);
+                    break;
+                case 6:
+                    intentDrawer = new Intent(SiapaKami.this, Beasiswa.class);
+                    break;
                 case 7:
                     intentDrawer = new Intent(SiapaKami.this, Login.class);
                     break;

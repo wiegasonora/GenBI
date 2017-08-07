@@ -12,20 +12,49 @@
         tools:context=".MainActivity"
         android:background="#ffffffff">
 
+        <ImageView
+            android:id="@+id/image_beranda"
+            android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/genbi"
+            android:layout_centerHorizontal="true"/>
+
         <TextView
+            android:layout_below="@id/image_beranda"
+            android:id="@+id/text_welcome_beranda"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Selamat Datang di GenBI !"
+            android:text="Selamat Datang di Gen BI !"
             android:textSize="24sp"
-            android:gravity="center"
-            android:layout_marginTop="100dp"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"/>
+        
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/text_welcome_beranda"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"/>
+            android:gravity="left">
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:gravity="left|center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="SOCIAL NETWORK : "
+                android:layout_marginRight="20dp"/>
+            <ImageView
+                android:id="@+id/fb_beranda"
+                android:src="@drawable/facebook"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"/>
+            <ImageView
+                android:id="@+id/twitter_beranda"
+                android:src="@drawable/twitter"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+        </LinearLayout>
     </RelativeLayout>
 
     <!-- Side navigation drawer UI -->
